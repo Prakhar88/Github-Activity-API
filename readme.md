@@ -1,8 +1,8 @@
 # ActivityHub
 
-ActivityHub is a simple command-line application that fetches and displays a GitHub user's recent public activity using the GitHub Events API.
+ActivityHub is a lightweight command-line application that fetches and displays a GitHub user's recent public activity using the GitHub Events API.
 
-Built as part of the GitHub User Activity project on roadmap.sh.
+Built as part of the roadmap.sh GitHub User Activity project.
 
 ## Features
 
@@ -16,6 +16,7 @@ Built as part of the GitHub User Activity project on roadmap.sh.
   * WatchEvent
   * ForkEvent
   * IssuesEvent
+  * IssueCommentEvent
   * PullRequestEvent
   * PullRequestReviewEvent
   * PullRequestReviewCommentEvent
@@ -30,11 +31,17 @@ Built as part of the GitHub User Activity project on roadmap.sh.
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/Prakhar88/ActivityHub.git
-cd ActivityHub
+git clone https://github.com/Prakhar88/Github-Activity-API.git
+cd Github-Activity-API
 ```
 
 ### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Or install manually:
 
 ```bash
 pip install requests
@@ -42,19 +49,19 @@ pip install requests
 
 ## Usage
 
-Run the program with a GitHub username:
+Run the application from the terminal:
 
 ```bash
-python Main.py <github_username>
+python ActivityHub.py <github_username>
 ```
 
 Example:
 
 ```bash
-python Main.py torvalds
+python ActivityHub.py torvalds
 ```
 
-Output:
+## Example Output
 
 ```text
 Recent Work of torvalds on github:
@@ -68,16 +75,16 @@ Recent Work of torvalds on github:
 ## Project Structure
 
 ```text
-ActivityHub/
+Github-Activity-API/
 │
-├── Main.py
-├── README.md
-└── requirements.txt
+├── ActivityHub.py
+├── requirements.txt
+└── README.md
 ```
 
 ## API Endpoint
 
-ActivityHub uses GitHub's public Events API:
+This project uses GitHub's public Events API:
 
 ```text
 https://api.github.com/users/<username>/events
@@ -95,19 +102,17 @@ The application handles:
 ## Technologies Used
 
 * Python 3
-* Requests Library
+* Requests
 * GitHub REST API
 
 ## Roadmap.sh Project
 
-This project was built as a solution to the GitHub User Activity challenge:
-
 https://roadmap.sh/projects/github-user-activity
-
-## License
-
-This project is licensed under the MIT License.
 
 ## Author
 
 Prakhar Srivastava
+
+## License
+
+This project is licensed under the MIT License.
